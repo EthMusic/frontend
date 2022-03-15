@@ -26,7 +26,7 @@ export default function MusicCard() {
     <div>
       <ul className="flex">
         {musicList.map((item) => (
-          <a href="">
+          <a href="" key={item.title}>
             <li className="text-white my-5 mr-10 flex flex-col">
               <Image
                 src={item.image}
