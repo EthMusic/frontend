@@ -1,24 +1,30 @@
 import Image from "next/image";
+import Link from "next/link"
 export default function MusicCard() {
   const musicList = [
     {
       title: "Song title",
+      url: "album",
       image: "/music-title.svg",
     },
     {
       title: "Song title",
+      url: "",
       image: "/music-title.svg",
     },
     {
       title: "Song title",
+      url: "",
       image: "/music-title.svg",
     },
     {
       title: "Song title",
+      url: "",
       image: "/music-title.svg",
     },
     {
       title: "Song title",
+      url: "",
       image: "/music-title.svg",
     },
   ];
@@ -26,7 +32,7 @@ export default function MusicCard() {
     <div>
       <ul className="flex">
         {musicList.map((item) => (
-          <a href="" key={item.title}>
+          <Link href={item.url} key={item.title}>
             <li className="text-white my-5 mr-10 flex flex-col">
               <Image
                 src={item.image}
@@ -38,7 +44,7 @@ export default function MusicCard() {
                 {item.title}
               </div>
             </li>
-          </a>
+          </Link>
         ))}
       </ul>
     </div>
